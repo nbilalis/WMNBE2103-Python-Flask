@@ -1,0 +1,24 @@
+{
+	"editor.fontFamily": "Cascadia Code",
+	"editor.fontLigatures": false,
+
+	"compile-hero.scss-output-directory": ".",
+	"compile-hero.disable-compile-files-on-did-save-code": false,
+
+	"markdownlint.config": {
+		"MD001": false,
+		"MD003": false,
+		"MD024": false,
+		"MD026": false,
+		"MD041": false,
+		"MD045": false,	// Images should have alternative text
+	},
+
+	"python.pythonPath": "C:\\Python39\\python.exe",
+	"python.linting.enabled": true,
+	"python.linting.flake8Enabled": true,
+	"python.linting.pylintEnabled": false,
+	"python.linting.pylintUseMinimalCheckers": false,
+
+	"window.zoomLevel": 0,
+}

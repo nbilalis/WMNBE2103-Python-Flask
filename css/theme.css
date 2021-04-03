@@ -1,0 +1,322 @@
+.remark-slide {
+  color: white;
+  font-family: "Century Gothic";
+}
+.remark-slide .remark-slide-content {
+  font-size: 18pt;
+}
+.remark-slide h1 {
+  font-size: 60pt;
+  font-weight: bold;
+}
+.remark-slide h2 {
+  font-size: 35pt;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.remark-slide h3 {
+  font-size: 32pt;
+  font-weight: bold;
+}
+.remark-slide a {
+  text-decoration: none;
+  color: #F49100;
+}
+.remark-slide a:hover {
+  text-decoration: underline;
+}
+.remark-slide h4:first-child, .remark-slide p:first-child, .remark-slide ul:first-child {
+  margin-top: 0;
+}
+.remark-slide * + p {
+  margin-top: 1em;
+}
+.remark-slide pre {
+  margin-top: 1rem;
+}
+.remark-slide em {
+  color: lightcoral;
+}
+.remark-slide li {
+  margin-top: 0.5em;
+}
+.remark-slide table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+.remark-slide thead {
+  border-bottom: 1px solid gray;
+}
+.remark-slide th {
+  white-space: nowrap;
+}
+.remark-slide th, .remark-slide td {
+  padding: 0.5em 1.5em;
+}
+.remark-slide img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.remark-slide .common {
+  background: linear-gradient(to bottom, #262626 100px, #0d0d0d 100px, #0d0d0d 100%);
+}
+.remark-slide .common.topbar-space {
+  padding-top: 100px;
+}
+.remark-slide .common .logo-sae, .remark-slide .common .logo-web {
+  position: absolute;
+  top: 20px;
+  z-index: 999;
+}
+.remark-slide .common .logo-sae img, .remark-slide .common .logo-web img {
+  height: 60px;
+  max-width: initial;
+  margin: initial;
+}
+.remark-slide .common .logo-sae {
+  left: 40px;
+}
+.remark-slide .common .logo-web {
+  right: 40px;
+}
+.remark-slide .common .ruler {
+  color: white;
+  font-family: Arial;
+  font-size: 22pt;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 40px;
+  z-index: 997;
+}
+.remark-slide .common .ruler.one {
+  color: #49B1B8;
+  left: 3%;
+}
+.remark-slide .common .ruler.two {
+  color: #307FE2;
+  left: 16.6%;
+}
+.remark-slide .common .ruler.three {
+  color: #6DA78E;
+  left: 30.2%;
+}
+.remark-slide .common .ruler.four {
+  color: #ECB730;
+  left: 43.8%;
+}
+.remark-slide .common .ruler.five {
+  color: #C72F2D;
+  left: 57.4%;
+}
+.remark-slide .common .ruler.six {
+  color: #00ACEC;
+  left: 71%;
+}
+.remark-slide .common .ruler.seven {
+  color: #6A519D;
+  left: 84.6%;
+}
+.remark-slide .common .footer {
+  color: gray;
+  font-size: 14pt;
+  font-style: italic;
+  position: absolute;
+  bottom: 18px;
+  left: 40px;
+  z-index: 997;
+}
+.remark-slide .common .footer a {
+  color: gray;
+}
+.remark-slide .cover {
+  border: 15px solid #743BBC;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../img/cover-bg.png");
+  background-position: center top;
+  background-size: cover;
+  vertical-align: middle;
+  text-align: center;
+}
+.remark-slide .cover h2 {
+  color: gray;
+}
+.remark-slide .cover h3 {
+  color: #743BBC;
+  font-size: 32pt;
+}
+.remark-slide .cover .logo-sae {
+  top: 50px;
+  left: 50px;
+}
+.remark-slide .cover .logo-web {
+  top: initial;
+  bottom: 35px;
+  right: 40px;
+}
+.remark-slide .cover .logo-web .img {
+  height: 75px;
+}
+.remark-slide .cover .ruler, .remark-slide .cover .footer, .remark-slide .cover .remark-slide-number {
+  display: none;
+}
+.remark-slide .section h2 {
+  font-size: 44pt;
+  color: #743BBC;
+}
+.remark-slide .section-details h3 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  margin: 0;
+  padding-top: 3.5rem;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../img/sidebar-bg.png");
+  background-size: cover;
+}
+.remark-slide .section-details > ul {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: calc(100px + 3.5rem + .5rem) 0 0 4em;
+  font-size: 18pt;
+  line-height: 1.5;
+  width: 70%;
+  box-sizing: border-box;
+  border-left: 12px #743BBC solid;
+  z-index: 998;
+  /* > :first-child {
+  	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	width: 70%;
+  	padding: 1rem;
+  } */
+}
+.remark-slide .section-details > ul li {
+  margin: 0;
+}
+.remark-slide .chapter > :not(span) {
+  margin-left: calc(25% + 2rem);
+}
+.remark-slide .chapter > h3 {
+  position: absolute;
+  top: calc(100px + 3.5rem);
+  left: 0;
+  width: 25%;
+  margin: 0;
+  padding: 1em 0.75em;
+  box-sizing: border-box;
+  text-align: center;
+}
+.remark-slide .chapter > p {
+  margin-top: 1.5em;
+}
+.remark-slide .chapter > p img {
+  display: block;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+.remark-slide .list h3 {
+  color: #743BBC;
+  font-size: 32pt;
+  margin-bottom: 1em;
+}
+.remark-slide .list ul {
+  padding-left: 0;
+  columns: 2;
+  column-gap: 3em;
+}
+.remark-slide .list ul li {
+  list-style-type: none;
+  break-inside: avoid-column;
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.remark-slide .list ul a {
+  display: block;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.remark-slide .section-details > ul::before, .remark-slide .section-details > ul::after {
+  content: "";
+  position: absolute;
+  right: 3rem;
+  width: 40px;
+  height: 40px;
+  border-right: 1px white solid;
+}
+.remark-slide .section-details > ul::before {
+  top: calc(100px + 3rem);
+  border-top: 1px white solid;
+}
+.remark-slide .section-details > ul::after {
+  bottom: calc(100px);
+  border-bottom: 1px white solid;
+}
+.remark-slide .chapter > h3::before, .remark-slide .chapter > h3::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-right: 1px white solid;
+}
+.remark-slide .chapter > h3::before {
+  top: -0.5em;
+  border-top: 1px white solid;
+}
+.remark-slide .chapter > h3::after {
+  bottom: -0.5em;
+  border-bottom: 1px white solid;
+}
+.remark-slide .chapter > h4 {
+  font-size: 1.2em;
+}
+.remark-slide .remark-code {
+  font-size: 20px;
+}
+.remark-slide .long-text {
+  font-size: 0.9em;
+}
+.remark-slide .long-code .remark-code {
+  font-size: 0.9em;
+}
+.remark-slide .extra-long-code .remark-code {
+  font-size: 0.8em;
+}
+.remark-slide .remark-inline-code {
+  color: #ECB730;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 0.1em;
+  margin-left: 0.1em;
+}
+.remark-slide .remark-slide-number {
+  font-size: 14pt;
+  color: white;
+  bottom: 20px !important;
+  right: 40px !important;
+}
+
+@media print {
+  .remark-slide-scaler {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-transform-origin: initial;
+    box-shadow: none;
+    transform: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
