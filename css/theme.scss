@@ -20,7 +20,7 @@ $accent-color: #743BBC;
 	}
 
 	h3 {
-		font-size: 32pt;
+		font-size: 28pt;
 		font-weight: bold;
 	}
 
@@ -68,7 +68,7 @@ $accent-color: #743BBC;
 	}
 
 	th, td {
-		padding: .5em 1.5em;
+		padding: .25em .75em;
 	}
 
 	img {
@@ -188,6 +188,10 @@ $accent-color: #743BBC;
 		h2 {
 			font-size: 44pt;
 			color: $accent-color;
+		}
+
+		img {
+			max-height: 18em;
 		}
 	}
 
@@ -359,7 +363,9 @@ $accent-color: #743BBC;
 	}
 
 	.long-text {
-		font-size: .9em;
+		td {
+			font-size: 0.7em;
+		}
 	}
 
 	.long-code .remark-code {

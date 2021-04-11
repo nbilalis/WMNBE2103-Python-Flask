@@ -15,7 +15,7 @@
   text-transform: uppercase;
 }
 .remark-slide h3 {
-  font-size: 32pt;
+  font-size: 28pt;
   font-weight: bold;
 }
 .remark-slide a {
@@ -52,7 +52,7 @@
   white-space: nowrap;
 }
 .remark-slide th, .remark-slide td {
-  padding: 0.5em 1.5em;
+  padding: 0.25em 0.75em;
 }
 .remark-slide img {
   margin-left: auto;
@@ -163,6 +163,9 @@
 .remark-slide .section h2 {
   font-size: 44pt;
   color: #743BBC;
+}
+.remark-slide .section img {
+  max-height: 18em;
 }
 .remark-slide .section-details h3 {
   position: absolute;
@@ -284,8 +287,8 @@
 .remark-slide .remark-code {
   font-size: 20px;
 }
-.remark-slide .long-text {
-  font-size: 0.9em;
+.remark-slide .long-text td {
+  font-size: 0.7em;
 }
 .remark-slide .long-code .remark-code {
   font-size: 0.9em;
