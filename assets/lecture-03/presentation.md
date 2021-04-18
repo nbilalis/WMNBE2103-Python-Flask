@@ -149,6 +149,13 @@ template: chapter
 
 Η εκχώρηση / ανάθεση τιμής γίνεται με το σύμβολο της ισότητας `=`.
 
+Μπορεί να γίνει ταυτόχρονη ανάθεση, σε παραπάνω από μία μεταβλητές
+
+```python
+var1 = <value>
+var1 = var2 = … = varn = <value>
+```
+
 ---
 
 #### Παράδειγμα
@@ -165,6 +172,8 @@ a multiline
 string"""             # str
 
 c = True              # bool
+
+e = f = 'We have the same value'
 
 ```
 
@@ -416,6 +425,7 @@ template: functions
 | `chr(n)` | "Αντίστροφη" λειτουργία από τη `ord` |
 
 ---
+class: long-text
 
 | Συνάρτηση | Λειτουργία |
 | :-- | :-- |
@@ -487,7 +497,7 @@ Bought 2 BTC for €50102.24
 ```python
 >>> print('Bought {0} {1} for €{2:,.2f}'
       .format(2, 'BTC', 100204.48))
-Bought 2 BTC for €100204.48
+Bought 2 BTC for €100,204.48
 
 ```
 
@@ -504,7 +514,7 @@ Bought 2 BTC for €100204.48
 ```python
 >>> print('Bought {n} {coin} for €{cost:,.2f}'
       .format(n=2, coin='BTC', cost=100204.48))
-Bought 2 BTC for €100204.48
+Bought 2 BTC for €100,204.48
 
 ```
 
@@ -519,7 +529,7 @@ Bought 2 BTC for €100204.48
 >>> coin = 'BTC'
 >>> cost = 100204.48
 >>> print(f'Bought {n} {coin} for €{cost:,.2f}')
-Bought 2 BTC for €100204.48
+Bought 2 BTC for €100,204.48
 
 ```
 
