@@ -15,7 +15,7 @@
   text-transform: uppercase;
 }
 .remark-slide h3 {
-  font-size: 28pt;
+  font-size: 26pt;
   font-weight: bold;
 }
 .remark-slide a {
@@ -52,7 +52,7 @@
   white-space: nowrap;
 }
 .remark-slide th, .remark-slide td {
-  padding: 0.25em 0.75em;
+  padding: 0.25em 0.5em;
 }
 .remark-slide img {
   margin-left: auto;
@@ -216,9 +216,6 @@
   box-sizing: border-box;
   text-align: center;
 }
-.remark-slide .chapter > p {
-  margin-top: 1.5em;
-}
 .remark-slide .chapter > p img {
   display: block;
   max-width: 90%;
@@ -283,12 +280,19 @@
 }
 .remark-slide .chapter > h4 {
   font-size: 1.2em;
+  margin-bottom: 1em;
 }
 .remark-slide .remark-code {
   font-size: 20px;
 }
+.remark-slide .long-text h4 {
+  margin-bottom: 0.5em;
+}
 .remark-slide .long-text td {
   font-size: 0.7em;
+}
+.remark-slide .long-text td, .remark-slide .long-text th {
+  padding: 0.5em 0.5em;
 }
 .remark-slide .long-code .remark-code {
   font-size: 0.9em;

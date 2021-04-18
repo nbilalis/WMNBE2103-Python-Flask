@@ -20,7 +20,7 @@ $accent-color: #743BBC;
 	}
 
 	h3 {
-		font-size: 28pt;
+		font-size: 26pt;
 		font-weight: bold;
 	}
 
@@ -68,7 +68,7 @@ $accent-color: #743BBC;
 	}
 
 	th, td {
-		padding: .25em .75em;
+		padding: .25em .5em;
 	}
 
 	img {
@@ -260,8 +260,6 @@ $accent-color: #743BBC;
 		}
 
 		> p {
-			margin-top: 1.5em;
-
 			img {
 				display: block;
 				max-width: 90%;
@@ -355,6 +353,7 @@ $accent-color: #743BBC;
 
 		> h4 {
 			font-size: 1.2em;
+			margin-bottom: 1em;
 		}
 	}
 
@@ -363,8 +362,16 @@ $accent-color: #743BBC;
 	}
 
 	.long-text {
+		h4 {
+			margin-bottom: .5em;
+		}
+
 		td {
 			font-size: 0.7em;
+		}
+
+		td, th {
+			padding: 0.5em 0.5em;
 		}
 	}
 
