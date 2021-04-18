@@ -21,7 +21,7 @@ $accent-color: #743BBC;
 	}
 
 	h3 {
-		font-size: 32pt;
+		font-size: 26pt;
 		font-weight: bold;
 	}
 
@@ -69,7 +69,7 @@ $accent-color: #743BBC;
 	}
 
 	th, td {
-		padding: .5em 1.5em;
+		padding: .25em .5em;
 	}
 
 	img {
@@ -190,6 +190,10 @@ $accent-color: #743BBC;
 			font-size: 44pt;
 			color: $accent-color;
 		}
+
+		img {
+			max-height: 18em;
+		}
 	}
 
 	$sidebar-width: 25%;
@@ -257,8 +261,6 @@ $accent-color: #743BBC;
 		}
 
 		> p {
-			margin-top: 1.5em;
-
 			img {
 				display: block;
 				max-width: 90%;
@@ -352,6 +354,7 @@ $accent-color: #743BBC;
 
 		> h4 {
 			font-size: 1.2em;
+			margin-bottom: 1em;
 		}
 	}
 
@@ -360,7 +363,17 @@ $accent-color: #743BBC;
 	}
 
 	.long-text {
-		font-size: .9em;
+		h4 {
+			margin-bottom: .5em;
+		}
+
+		td {
+			font-size: 0.7em;
+		}
+
+		td, th {
+			padding: 0.5em 0.5em;
+		}
 	}
 
 	.long-code .remark-code {
