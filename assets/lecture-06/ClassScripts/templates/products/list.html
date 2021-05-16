@@ -1,0 +1,19 @@
+{% extends "_layout.html" %}
+
+
+{% block title %}Product List{% endblock %}
+
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/product-list.js') }}"></script>
+{% endblock %}
+
+
+{% block main %}
+<h1>Product List</h1>
+<ul>
+  {% for sku, product in products.items() %}
+  <li><a href="{{ url_for('product_details', sku=sku) }}">{{ product.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
