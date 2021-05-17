@@ -295,6 +295,9 @@
 .remark-slide .long-text td, .remark-slide .long-text th {
   padding: 0.5em 0.5em;
 }
+.remark-slide .long-text p {
+  font-size: 0.9em;
+}
 .remark-slide .long-code .remark-code {
   font-size: 0.9em;
 }
