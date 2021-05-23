@@ -311,11 +311,18 @@
   margin-right: 0.1em;
   margin-left: 0.1em;
 }
+.remark-slide .chapter .remark-inline-code {
+  font-size: 1.5em;
+}
 .remark-slide .remark-slide-number {
   font-size: 14pt;
   color: white;
   bottom: 20px !important;
   right: 40px !important;
+}
+
+.hljs-meta {
+  color: #1f7199 !important;
 }
 
 @media print {

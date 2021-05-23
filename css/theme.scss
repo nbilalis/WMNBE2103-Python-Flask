@@ -396,6 +396,10 @@ $accent-color: #743BBC;
 		margin-left: .1em;
 	}
 
+	.chapter .remark-inline-code {
+		font-size: 1.5em;
+	}
+
 	.remark-slide-number {
 		font-size: 14pt;
 //	font-weight: bold;
@@ -403,6 +407,10 @@ $accent-color: #743BBC;
 		bottom: 20px !important;
 		right: $horizontal-margin !important;
 	}
+}
+
+.hljs-meta {
+	color: #1f7199 !important;
 }
 
 @media print {

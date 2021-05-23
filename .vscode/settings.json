@@ -1,8 +1,7 @@
 {
-	"window.zoomLevel": 1,
+	// "window.zoomLevel": 1,
 
 	"editor.fontFamily": "Cascadia Code",
-	"editor.fontLigatures": false,
 
 	"editor.tabSize": 4,
 	"editor.insertSpaces": true,
@@ -18,10 +17,4 @@
 		"MD041": false,
 		"MD045": false,	// Images should have alternative text
 	},
-
-	"python.pythonPath": "C:\\Python39\\python.exe",
-	"python.linting.enabled": true,
-	"python.linting.flake8Enabled": true,
-	"python.linting.pylintEnabled": false,
-	"python.linting.pylintUseMinimalCheckers": false,
 }

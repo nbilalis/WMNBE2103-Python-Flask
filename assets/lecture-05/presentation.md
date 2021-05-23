@@ -67,6 +67,7 @@ template: section-details
 
 ---
 
+- Εισαγωγή
 - Εγκατάσταση
   - `venv`
   - `pip`
@@ -321,13 +322,13 @@ def hello(name='World'):
 
 Ένας `converter` λειτουργεί παράλληλα και ως περιορισμός.
 
-| Converter |  |
-| :-- | :-- |
-| string | (default) accepts any text without a slash |
-| int | accepts positive integers |
-| float | accepts positive floating point values |
-| path | like string but also accepts slashes |
-| uuid | accepts UUID strings |
+| Converter |                                            |
+| :-------- | :----------------------------------------- |
+| string    | (default) accepts any text without a slash |
+| int       | accepts positive integers                  |
+| float     | accepts positive floating point values     |
+| path      | like string but also accepts slashes       |
+| uuid      | accepts UUID strings                       |
 
 ---
 
