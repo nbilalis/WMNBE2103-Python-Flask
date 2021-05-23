@@ -1,3 +1,3 @@
-[submodule "assets/lecture-07/ClassScripts/flask-shop"]
-	path = assets/lecture-07/ClassScripts/flask-shop
+[submodule "assets/flask-shop"]
+	path = assets/flask-shop
 	url = https://github.com/nbilalis/flask-shop.git
