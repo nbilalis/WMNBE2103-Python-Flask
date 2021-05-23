@@ -1,0 +1,23 @@
+{% extends "_layout.html" %}
+
+{% block title %}
+    Search products
+{% endblock %}
+
+{% block main %}
+    <fieldset>
+    <legend>Search form:</legend>
+        <form action='{{ url_for('search_products') }}' method='get'>
+            <input type='text' id='q' name='q'>
+            <button type='submit'>Search</button>
+        </form>
+    </fieldset>
+    {% if products %}
+        <h1>Results</h1>
+        <ul>
+        {% for product in products %}
+            <li>{{ product.title }} {{ product.price|format_currency }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock main %}
