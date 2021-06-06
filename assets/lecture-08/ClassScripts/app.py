@@ -14,7 +14,7 @@ app.secret_key = environ.get('SECRET_KEY', '1234')
 
 @app.route('/')
 def home():
-    if not session['timestamp']:
+    if 'timestamp' not in session:
         session['timestamp'] = datetime.now()
     return render_template('index.html')
 
