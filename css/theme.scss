@@ -77,6 +77,14 @@ $accent-color: #743BBC;
 		margin-right: auto;
 	}
 
+	h3 + p img {
+		height: 25vw;
+	}
+
+	h4 + p img {
+		height: 20vw;
+	}
+
 	$topbar-height: 100px;
 	$logo-height: 60px;
 	$horizontal-margin: 40px;
