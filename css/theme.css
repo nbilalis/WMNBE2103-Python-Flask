@@ -58,6 +58,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+.remark-slide h3 + p img {
+  height: 25vw;
+}
+.remark-slide h4 + p img {
+  height: 20vw;
+}
 .remark-slide .common {
   background: linear-gradient(to bottom, #262626 100px, #0d0d0d 100px, #0d0d0d 100%);
 }
