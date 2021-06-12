@@ -17,4 +17,10 @@
 		"MD041": false,
 		"MD045": false,	// Images should have alternative text
 	},
+
+    "search.exclude": {
+        "**/.git": true,
+        "**/.venv": true,
+        "**/venv": true,
+    },
 }
