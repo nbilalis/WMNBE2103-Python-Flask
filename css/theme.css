@@ -19,6 +19,9 @@
   font-size: 26pt;
   font-weight: bold;
 }
+.remark-slide p {
+  line-height: 1.4em;
+}
 .remark-slide a {
   text-decoration: none;
   color: #F49100;
