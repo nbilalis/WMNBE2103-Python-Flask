@@ -453,11 +453,11 @@ try:
             {'username': u, 'password': p, 'fullname': f}
         )
         # Context manager with deal with the commit
-    flask('Registration successful', 'success')
+    flash('Registration successful', category='success')
 except Exception as err:
     # Context manager with deal with the rollback
     app.logger.error(err)
-    flask('Something went wrong...', 'error')
+    flash('Something went wrong...', category='error')
 finally:
     con.close()
 
