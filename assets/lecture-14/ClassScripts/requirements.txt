@@ -1,0 +1,10 @@
+Flask
+Flask-SQLAlchemy
+flake8
+autopep8
+python-dotenv
+
+flask_debugtoolbar
+lorem
+
+pip
