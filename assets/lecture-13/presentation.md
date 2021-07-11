@@ -454,6 +454,41 @@ class: long-text
 | `dynamic`        | will return another query object which you can further refine before loading the items.    |
 
 ---
+class: long-text
+
+#### `table`
+
+Στις `1:N` και `1:1` σχέσεις, σε κάθε άκρο τους υπάρχει μία οντότητα. Στις `N-N` σχέσεις, από την άλλη, υπάρχει ένα ενδιάμεσος, βοηθητικός, πίνακας.
+
+Για να οριστούν τέτοιου είδους σχέσεις και να περιγραφούν οι ενδιάμεσοι αυτοί πίνακες , πρέπει να χρησιμοποιηθεί η μέθοδος `table`.
+
+Με τη μέθοδο `table` θα μπορούσαν να οριστούν όλοι οι πίνακες της βάσεις, ώστε οι κλάσεις / μοντέλα να μην περιέχουν (όσο είναι δυνατό) `database-related` κώδικα. Aυτό, όμως, αποτελεί μια διαφορετική προσέγγιση, που δεν θα καλυφθεί εδώ.
+
+---
+class: long-code
+
+#### Παράδειγμα
+
+```python
+book_authors = db.Table('book_authors',
+    db.Column('book_id', db.Integer, db.ForeignKey('book.id')),
+    db.Column('author_id', db.Integer, db.ForeignKey('author.id'))
+)
+
+class Book(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String)
+    authors = db.relationship('Author',
+                              secondary=book_authors,
+                              backref='books')
+
+class Author(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+
+```
+
+---
 template: list
 
 ### Χρήσιμα links
