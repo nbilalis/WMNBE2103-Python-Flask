@@ -94,7 +94,7 @@ template: chapter
 
 Η `Python` υποστηρίζει αρκετές διαφορετικές προσεγγίσεις προγραμματισμού. Ο _Αντικειμενοστρεφής Προγραμματισμός_ είναι μία από αυτές.
 
-Στον _Αντικειμενοστρεφής Προγραμματισμό_ (`OOP`) τα πρωτεύοντα δομικά στοιχεία του προγράμματος είναι τα δεδομένα, από τα οποία δημιουργούνται, με κατάλληλη μορφοποίηση, τα αντικείμενα (`objects`).
+Στον _Αντικειμενοστρεφή Προγραμματισμό_ (`OOP`) τα πρωτεύοντα δομικά στοιχεία του προγράμματος είναι τα δεδομένα, από τα οποία δημιουργούνται, με κατάλληλη μορφοποίηση, τα αντικείμενα (`objects`).
 
 Στόχος του είναι η δημιουργία ευέλικτου και επαναχρησιμοποιούμενου κώδικα.
 
@@ -303,14 +303,14 @@ template: chapter
 
 Το πιο γνωστό κομμάτι της σουίτας αυτής είναι το κομμάτι του `Object-Relational Mapper` (`ORM`), το οποίο υλοποιεί το `data mapper` μοτίβο.
 
-Με αυτό γίνεται αντιστοίχηση κλάσεων της εφαρμογής με τα στοιχεία της βάσης.
+Με αυτό γίνεται αντιστοίχιση κλάσεων της εφαρμογής με τα στοιχεία της βάσης.
 
 ---
 class: long-text, long-code
 
 #### `session`
 
-Στην καρδιά του `SQLAlchemy` βρίσκεται το `session`. Με αυτού γίνεται όλη η διαχείριση της επικοινωνίας με τη βάση με τη βάση.
+Στην καρδιά του `SQLAlchemy` βρίσκεται το `session`. Μέσω αυτού γίνεται όλη η διαχείριση της επικοινωνίας με τη βάση με τη βάση.
 
 Προσοχή να μη συγχέεται με το `session` μιας web εφαρμογής. Tο `session` εδώ παίζει, λίγο ή πολύ, το ρόλο του `connection`.
 
@@ -428,7 +428,7 @@ class: long-text, long-code
 
 Η κλήση της `relationship` μπορεί να βρίσκεται από οποιαδήποτε "πλευρά" της σχέσης και μπορεί να δημιουργήσει _attributes_ και στα δύο "άκρα" ταυτόχρονα, με τη βοήθεια του ορίσματος `backref`.
 
-Σε σχέσεις `1-1` αρκεί να προστεθεί το όρισμα `uselist=False`.
+Σε σχέσεις `1:1` αρκεί να προστεθεί το όρισμα `uselist=False`.
 
 ```Python
 class Post(db.Model):
@@ -446,10 +446,47 @@ class: long-text
 
 Η παράμετρος `lazy` καθορίζει τον τρόπο και τη στιγμή που το `SQLAlchemy` θα φορτώσει από τη βάση τα σχετιζόμενα δεδομένα.
 
-- `select` / `True` (default) will load the data as necessary in one go using a standard select statement.
-- `joined` / `False` load the relationship in the same query as the parent using a `JOIN` statement.
-- `subquery` works like `joined` but will use a subquery.
-- `dynamic`  will return another query object which you can further refine before loading the items.
+| Τιμή             | Περιγραφή                                                                                  |
+|------------------|--------------------------------------------------------------------------------------------|
+| `select`/`True`  | (_default_) will load the data as necessary in one go using a standard `select` statement. |
+| `joined`/`False` | load the relationship in the same query as the parent using a `join` statement.            |
+| `subquery`       | works like `joined` but will use a `subquery` statement.                                   |
+| `dynamic`        | will return another query object which you can further refine before loading the items.    |
+
+---
+class: long-text
+
+#### `table`
+
+Στις `1:N` και `1:1` σχέσεις, σε κάθε άκρο τους υπάρχει μία οντότητα. Στις `N-N` σχέσεις, από την άλλη, υπάρχει ένα ενδιάμεσος, βοηθητικός, πίνακας.
+
+Για να οριστούν τέτοιου είδους σχέσεις και να περιγραφούν οι ενδιάμεσοι αυτοί πίνακες , πρέπει να χρησιμοποιηθεί η μέθοδος `table`.
+
+Με τη μέθοδο `table` θα μπορούσαν να οριστούν όλοι οι πίνακες της βάσεις, ώστε οι κλάσεις / μοντέλα να μην περιέχουν (όσο είναι δυνατό) `database-related` κώδικα. Aυτό, όμως, αποτελεί μια διαφορετική προσέγγιση, που δεν θα καλυφθεί εδώ.
+
+---
+class: long-code
+
+#### Παράδειγμα
+
+```python
+book_authors = db.Table('book_authors',
+    db.Column('book_id', db.Integer, db.ForeignKey('book.id')),
+    db.Column('author_id', db.Integer, db.ForeignKey('author.id'))
+)
+
+class Book(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String)
+    authors = db.relationship('Author',
+                              secondary=book_authors,
+                              backref='books')
+
+class Author(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+
+```
 
 ---
 template: list
