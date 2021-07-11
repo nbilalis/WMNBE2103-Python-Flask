@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block main %}
+    <h1>Welcome to Flask News!</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('article_list') }}">Article List</a></li>
+            <li><a href="{{ url_for('new_article') }}">New Article</a></li>
+        </ul>
+    </nav>
+{% endblock main %}
