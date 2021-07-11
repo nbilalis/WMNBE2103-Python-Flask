@@ -446,10 +446,12 @@ class: long-text
 
 Η παράμετρος `lazy` καθορίζει τον τρόπο και τη στιγμή που το `SQLAlchemy` θα φορτώσει από τη βάση τα σχετιζόμενα δεδομένα.
 
-- `select` / `True` (default) will load the data as necessary in one go using a standard select statement.
-- `joined` / `False` load the relationship in the same query as the parent using a `JOIN` statement.
-- `subquery` works like `joined` but will use a subquery.
-- `dynamic`  will return another query object which you can further refine before loading the items.
+| Τιμή             | Περιγραφή                                                                                  |
+|------------------|--------------------------------------------------------------------------------------------|
+| `select`/`True`  | (_default_) will load the data as necessary in one go using a standard `select` statement. |
+| `joined`/`False` | load the relationship in the same query as the parent using a `join` statement.            |
+| `subquery`       | works like `joined` but will use a `subquery` statement.                                   |
+| `dynamic`        | will return another query object which you can further refine before loading the items.    |
 
 ---
 template: list
