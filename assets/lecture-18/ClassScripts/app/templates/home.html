@@ -1,0 +1,50 @@
+{% extends "_base.html" %}
+
+{% block main %}
+<div class="row">
+	<div class="col-md-3">
+		<!-- profile brief -->
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>{{ current_user.username }}</h4>
+				<p>I love to code!</p>
+			</div>
+		</div>
+		<!-- ./profile brief -->
+	</div>
+	<div class="col-md-6">
+		<!-- post form -->
+		<form method="post">
+			{{ post_form.csrf_token }}
+			<div class="input-group">
+				{{ post_form.body(class="form-control", placeholder=post_form.body.description) }}
+				<span class="input-group-btn">
+					{{ post_form.submit_post(class="btn btn-success") }}
+				</span>
+			</div>
+		</form><hr>
+		<!-- ./post form -->
+
+		<!-- feed -->
+		<div>
+			{% for post in latest_posts %}
+				<!-- post -->
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<p>{{ post.body }}</p>
+					</div>
+					<div class="panel-footer">
+						<span title="{{ post.created_at|timestamp }}">
+							posted <em>{{ post.created_at|timeago }}</em> by <em>{{ post.author.username }}</em></span>
+					</div>
+				</div>
+				<!-- ./post -->
+			{% endfor %}
+		</div>
+		<!-- ./feed -->
+	</div>
+	<div class="col-md-3">
+		{% include "_follow.html" %}
+	</div>
+</div>
+{% endblock main %}
