@@ -1,0 +1,37 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: 🔁 Touch restart.txt
+      run: |
+        mkdir ./tmp
+        echo $(date) > ./tmp/restart.txt
+        touch ./tmp/restart.txt
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.sae-projects.eu
+        username: saeprojects
+        password: ${{ secrets.ftp_password }}
+        dry-run: false
+        server-dir: ./flask-book/
+        exclude: This is a string, not a list, so you need to put something here
+          - __pycache__
+          - _assets
+          - _assets/**
+          - _links
+          - _links/**
+          - _setup_*
+          - .*
+          - .*/**
+          - migrations
+          - migrations/**
+          - LICENSE
+          - README.md
+          - requirements.txt
